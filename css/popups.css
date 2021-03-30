@@ -1,0 +1,125 @@
+.popup {
+    margin: 2em auto;
+    width: 95%;
+    max-width: 37.5em;
+    box-sizing: border-box;
+    padding: 6.25em;
+    box-shadow: 0 1.25em 2.5em rgba(82, 82, 82, 0.3);
+    background-color: #D4F3FF;
+    position: relative;
+    transition: 0.3s;
+}
+.popup a {
+    color: inherit;
+    text-decoration: underline;
+}
+.popup a:hover {
+    text-decoration: none;
+}
+.mfp-fade .popup {
+    transform: scale(2);
+    opacity: 0;
+}
+.mfp-fade.mfp-ready .popup {
+    transform: scale(1);
+    opacity: 1;
+}
+.mfp-fade.mfp-removing .popup {
+    transform: scale(2);
+    opacity: 0;
+}
+.popup.notification_popup {
+    padding: 6.25em 6.25em 4.25em;
+    max-width: 31.25em;
+}
+.popup .row1 {
+    color: #0055C9;
+    margin: 0 auto 1em;
+    font-size: 1.875em;
+    font-family: 'Univers LT CYR', sans-serif;
+    font-weight: 700;
+}
+.popup .row2 {}
+.popup .row2 .item {
+    margin: 0 0 1.5em;
+}
+.popup .row2 .item .line1 {
+    font-size: 1.125em;
+    margin: 0 0 0.3em;
+    color: #0E5C9F;
+    padding: 0 1.5em;
+}
+.popup .row2 .item .text_input_wrap {
+    font-size: 1.125em;
+}
+.popup .row3 {
+    margin: 0 auto 1.5em;
+    display: flex;
+    align-items: center;
+}
+.popup .row3 .checkbox_wrap {
+    margin: 0 1em 0 0;
+}
+.popup .row3 .text_wrap {
+    max-width: calc(100% - 2.8125em);
+}
+.popup .row4 .orange_butt {
+    width: 100%;
+}
+.popup .row5 {
+    margin: 0 0 1.5em;
+}
+.popup .row5 .image {
+    display: block;
+    margin: 0;
+    max-width: 100%;
+}
+.popup .row6 {
+    font-size: 1.125em;
+}
+.popup .row6 a {
+    color: inherit;
+}
+.popup .row9 {
+    font-size: 1.5em;
+    margin: 1em 0 0;
+}
+.popup .row10 {
+    margin: 0 auto 1.875em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.popup .row10 .line1 {
+    color: #0055C9;
+    
+    font-size: 1.875em;
+    font-family: 'Univers LT CYR', sans-serif;
+    font-weight: 700;
+}
+.popup .row10 .line2 {
+    font-size: 1.5em;
+}
+@media(max-width: 767px) {
+    .popup {
+        padding: 2em 1em;
+    }
+    .popup.notification_popup {
+        padding: 2em 1em;
+    }
+    .popup .row1 {
+        font-size: 1.5em;
+    }
+    .popup .row2 .item {
+        margin: 0 auto 1em;
+    }
+    .popup .row2 .item .line1 {
+        font-size: 1em;
+    }
+    .popup .row2 .item .text_input_wrap {
+        font-size: 1em;
+    }
+    .popup .row3 {
+        margin: 0 0 1em;
+    }
+}
