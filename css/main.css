@@ -1350,7 +1350,8 @@
 
 /*----------END quality-------------------*/
 /*----------------END about-page---------------*/
-/*----------------service-page---------------*/
+/*----------------SERVICE-PAGE---------------*/
+/*---------------service-----------------------*/
 .service {
   padding-bottom: 3.125em;
 }
@@ -1444,6 +1445,8 @@
   }
 }
 
+/*---------------END service------------------------*/
+/*---------------END service-work------------------------*/
 .service-work {
   padding-top: 3.125em;
 }
@@ -1486,6 +1489,13 @@
 .service-work__info .np-section__title:after {
   bottom: 0.1em;
   right: -0.6em;
+}
+
+@media only screen and (max-width: 1199px) {
+  .service-work__info .np-section__title:after {
+    bottom: -0.05em;
+    right: -0.8em;
+  }
 }
 
 @media only screen and (max-width: 1199px) {
@@ -1661,7 +1671,7 @@
 
 @media only screen and (max-width: 375px) {
   .service-work__form .popup {
-    padding: 13px;
+    padding: 30px 13px;
   }
 }
 
@@ -1736,14 +1746,20 @@
   }
 }
 
+/*---------------END service-work------------------------*/
+/*---------------online-help------------------------*/
 .online-help {
-  padding-top: 3.125em;
+  padding-top: 5.625em;
   padding-bottom: 6.25em;
 }
 
+.online-help .np-section__title:after {
+  right: -0.2em;
+}
+
 @media only screen and (max-width: 576px) {
-  .online-help .np-section__title br {
-    display: none;
+  .online-help .np-section__subtitle {
+    font-size: 14px;
   }
 }
 
@@ -1896,6 +1912,7 @@
   }
 }
 
+/*---------------END online-help------------------------*/
 /*-------------_order-treatment--------------*/
 .order-treatment .step-process,
 .order-treatment .step-process__num {
@@ -1921,7 +1938,7 @@
 }
 
 .order-treatment .step-process .step-process__num {
-  top: 10px;
+  top: 15px;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -1931,7 +1948,7 @@
 }
 
 .order-treatment .step-process:nth-child(2n) .step-process__num {
-  top: 32px;
+  top: 36px;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -2071,6 +2088,10 @@
   .order-treatment .step-process__text {
     margin-top: 17px;
     max-width: 195px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -2110,7 +2131,7 @@
 
 @media only screen and (max-width: 767px) {
   .blue-grad-cover {
-    padding: 2em 0;
+    padding: 2em 0 3.2em;
   }
 }
 
@@ -2175,6 +2196,6 @@
 }
 
 /*-------------END_order-treatment--------------*/
-/*----------------END service-page---------------*/
+/*----------------END SERVICE-PAGE---------------*/
 
 /*# sourceMappingURL=maps/main.css.map */
