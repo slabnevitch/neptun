@@ -112,27 +112,49 @@
     }
 };
  
-$(window).load(function(){
-   if(screen.width < 768){
-      var waypoints = $('.advantages__block').waypoint({
-         offset: '25%',
-         handler: function(direction) {
+$(document).ready(function(){
+    var icons = document.querySelectorAll('#energy, #moneybox, #battery, #calendar, #invoice')
+   // if(screen.width < 768){
+   //    var waypoints = $('.advantages__block').waypoint({
+   //       offset: '25%',
+   //       handler: function(direction) {
+   //          showIcons();
+   //      }
+   //    });
+   // }else{
+   //    showIcons();
+   // }
             showIcons();
-
-        }
-      });
-   }else{
-      showIcons();
-   }
   
-  function showIcons() {
-      $('#energy, #moneybox, #battery, #calendar, #invoice').lazylinepainter({
-        "svgData": pathObj,
-        "strokeWidth": 1,
-        "strokeColor": "#000"
-      }).lazylinepainter('paint');  
+      // $('#energy, #moneybox, #battery, #calendar, #invoice').lazylinepainter({
+      //   "svgData": pathObj,
+      //   "strokeWidth": 1,
+      //   "strokeColor": "#000"
+      // }).lazylinepainter('paint');  
+      function showIcons() {
 
-  }
+        for(var i=0; i<icons.length; i++){
+            let el = icons[i];
+            let nexElInd = i + 1
+            console.log('current ' + i);
+
+            if(i < icons.length - 1){
+                console.log('next ' + (i+1));
+            }
+            let myAnimation = new LazyLinePainter(el, {
+                // "svgData": pathObj,
+                "strokeWidth": 1,
+                "strokeColor": "#000"
+            });
+
+            myAnimation.paint()
+            myAnimation.pause()
+            setTimeout(function() {
+                myAnimation.resume();
+
+            }, 1000)
+        }
+    }
 
 });
 
